@@ -8,7 +8,8 @@
     "client": [
         "OptionsMixin",
         "SodiumConfigBuilderMixin",
-        "SliderControl$SliderControlElementMixin"
+        "SliderControl$SliderControlElementMixin",
+        "IntegerSliderOptionRowMixin"
     ],
     "injectors": {
         "defaultRequire": 1

@@ -1,2 +1,2 @@
 # AccurateFPS
-makes the max fps slider in settings increment by 1 instead of 10, and snap to 30, 36, 48, 60, 72, 90, 120, 144, 165, and 240 in case the slider isn't wide enough to provide enough precision to get those common values exactly.
+makes the max fps slider in settings increment by 1 instead of 10, and snap to 30, 36, 48, 55, 60, 72, 90, 120, 144, 165, and 240 in case the slider isn't wide enough to provide enough precision to get those common values exactly.
