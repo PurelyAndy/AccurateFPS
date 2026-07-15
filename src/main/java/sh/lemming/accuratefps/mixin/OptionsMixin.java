@@ -6,17 +6,13 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArgs;
 import org.spongepowered.asm.mixin.injection.Slice;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
+import sh.lemming.accuratefps.Config;
 
 import java.util.function.IntFunction;
 import java.util.function.ToIntFunction;
 
 @Mixin(Options.class)
 public class OptionsMixin {
-    private static final int SNAP_RANGE = 2; // on either side, so 5 total values will snap to 1 value
-    private static int[] snaps = new int[] {
-            30, 36, 48, 60, 72, 90, 120, 144, 165, 240
-    };
-
     @ModifyArgs(
         method = "<init>",
         at = @At(
@@ -31,8 +27,8 @@ public class OptionsMixin {
     )
     private void customSnappingLogic(Args args) {
         IntFunction<Integer> sliderProgressToValue = (progress) -> {
-            for (int snap : snaps) {
-                if (Math.abs(progress - snap) <= SNAP_RANGE) {
+            for (int snap : Config.SNAPS) {
+                if (Math.abs(progress - snap) <= Config.SNAP_RANGE) {
                     return snap;
                 }
             }

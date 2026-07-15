@@ -6,7 +6,9 @@
     "mixins": [
     ],
     "client": [
-        "OptionsMixin"
+        "OptionsMixin",
+        "SodiumConfigBuilderMixin",
+        "SliderControl$SliderControlElementMixin"
     ],
     "injectors": {
         "defaultRequire": 1
